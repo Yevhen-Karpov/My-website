@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website</title>
+    <title>Создание сайтов</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -54,8 +54,8 @@
             </div>
 
             <div class="experience-description">
-                <p>32 готовых проекта</p>
-                <p>2 года опыта</p>
+                <p>3 готовых проекта</p>
+                <p>1 год опыта</p>
             </div>
 
             <div class="my-instruments">
@@ -140,35 +140,39 @@
                     <p class="project-price-sum"><span class="project-price-sum-currency">$</span><span
                             id="total-price">0</span></p>
                 </div>
-                <button class="project-price-calc-btn">Отправить запрос</button>
+                <input type="hidden" name="Email">
+                <button type="button" class="project-price-calc-btn">Отправить запрос</button>
             </form>
     </div>
     </section>
 
     <!-- =================================  modal-dropbox ==================================== -->
-    <!-- <div class="modal-bgd modal-active"> -->
-    <div class="modal-container">
-        <button class="modal-close-icon">
-            <img src="./img/icons/close-icon.svg" alt="">
-        </button>
-        <img src="./img/icons/Vector.svg" alt="" width="24" height="24" class="modal-container-icon">
-        <h4 class="modal-title">Я свяжусь с Вами в течении ближайшего часа.</h4>
-        <form action="" method="POST" class="modal-container-form">
-            <label for="user-email" class="user-email-title">Email</label>
-            <input type="email" name="user-email" id="user-email" class="user-email" placeholder="Укажите email">
-
-            <button type="submit" class="modal-container-btn">Отправить</button>
-        </form>
+    <div class="modal-bgd" id="modal-first">
+        <div class="modal-container">
+            <button class="modal-close-icon">
+                <img src="./img/icons/close-icon.svg" alt="">
+            </button>
+            <img src="./img/icons/Vector.svg" alt="" width="24" height="24" class="modal-container-icon">
+            <h4 class="modal-title">Я свяжусь с Вами в течении ближайшего часа.</h4>
+            <form action="" method="POST" class="modal-container-form" id="modal-email-container">
+                <div class="email-input-container">
+                    <label for="user-email" class="user-email-title">Email</label>
+                    <input type="email" name="user-email" id="user-email" class="user-email" placeholder="Укажите email"
+                        required>
+                    <p class="email-error-text">Проверьте Email</p>
+                </div>
+                <button type="submit" class="modal-container-btn">Отправить</button>
+            </form>
+        </div>
     </div>
-    </div>
-    <!-- <div class="modal-bgd modal-active"> -->
-    <div class="modal-container">
-        <button class="modal-close-icon">
-            <img src="./img/icons/close-icon.svg" alt="">
-        </button>
-        <img src="./img/icons/Vector (1).svg" alt="" width="24" height="24" class="modal-container-icon">
-        <p class="modal-title">Спасибо. Ваше сообщение отправлено. Я свяжусь с Вами в течении ближайшего часа.</p>
-    </div>
+    <div class="modal-bgd" id="modal-second">
+        <div class="modal-container">
+            <button class="modal-close-icon">
+                <img src="./img/icons/close-icon.svg" alt="">
+            </button>
+            <img src="./img/icons/Vector (1).svg" alt="" width="24" height="24" class="modal-container-icon">
+            <p class="modal-title">Спасибо. Ваш запрос отправлен. Я свяжусь с Вами в течении ближайшего часа.</p>
+        </div>
     </div>
     <script src="./index.js"></script>
 </body>

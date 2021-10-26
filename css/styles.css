@@ -238,10 +238,7 @@ a {
   cursor: pointer;
 }
 /* =====================================  modal-dropbox  ============================== */
-.modal-active {
-  pointer-events: all;
-  opacity: 1;
-}
+
 .modal-bgd {
   position: fixed;
   top: 0;
@@ -250,6 +247,13 @@ a {
   height: 100%;
   background-color: rgb(79 79 79 / 0.9);
   padding: 16px 498px;
+  pointer-events: none;
+  opacity: 0;
+}
+.modal-active {
+  pointer-events: all;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 .modal-container {
   position: relative;
@@ -257,7 +261,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 364px;
-
+  height: 100%;
   background-color: #ffffff;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
@@ -294,12 +298,29 @@ a {
   flex-direction: column;
   align-self: flex-start;
 }
+.email-input-container {
+  margin-bottom: 116px;
+  height: 60px;
+}
 .user-email {
   font-family: Montserrat, sans-serif;
-  margin-bottom: 116px;
+  margin-bottom: 8px;
   border: none;
   border-bottom: 1px solid #4f4f4f;
   outline: none;
+}
+.email-error-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #822222;
+  margin-left: 48px;
+  display: none;
+}
+.email-input-container-error .email-error-text {
+  display: block;
+}
+.email-input-container-error .user-email {
+  border-bottom: 1px solid #822222;
 }
 .modal-container-btn {
   font-weight: bold;
