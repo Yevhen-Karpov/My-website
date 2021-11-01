@@ -50,7 +50,7 @@ a {
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 0px 104px 72px 104px;
+  padding: 0px 40px 72px 40px;
 }
 .section {
   width: 364px;
@@ -82,11 +82,30 @@ a {
   line-height: 24px;
   color: #4f4f4f;
 }
-
+.experience-description-text {
+  padding-left: 32px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.experience-description-text::before {
+  position: absolute;
+  left: -9px;
+  bottom: 4px;
+  width: 22px;
+  height: 30px;
+  content: "";
+  display: inline-block;
+  background-image: url("../img/icons/campfire.svg");
+  background-size: contain;
+}
+.my-project {
+  padding: 8px 16px;
+}
 .my-project-link {
+  align-self: center;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 30px;
   text-decoration-line: underline;
   color: #eb5757;
 }
@@ -94,13 +113,14 @@ a {
   width: 96px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 /* ===========================  About-section  ================================ */
 .about-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 480px;
 }
 .my-name {
   font-weight: bold;
@@ -110,12 +130,12 @@ a {
   margin-bottom: 32px;
 }
 .my-job {
-  margin-bottom: 32px;
+  margin-bottom: 60px;
 }
-.my-location,
+/* .my-location,
 .my-workstyle {
   color: #ffffff;
-  background-color: #328a36;
+  background-color: #86d38a;
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
@@ -123,32 +143,49 @@ a {
   padding: 4px 16px;
 }
 .my-workstyle {
-  margin-bottom: 100px;
-}
+  margin-bottom: 60px;
+} */
 .my-description {
   font-size: 16px;
   line-height: 24px;
   color: #4f4f4f;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 .my-skills-title {
-  font-weight: bold;
-  font-size: 16px;
+  /* font-weight: bold; */
+  font-size: 14px;
   line-height: 24px;
+  color: #4f4f4f;
+  margin-bottom: 16px;
+}
+.my-skills-title__span1 {
+  font-size: 36px;
+  line-height: 36px;
   color: #333333;
   margin-bottom: 16px;
+}
+.my-skills-title__span2 {
+  color: #328a36;
+}
+.my-list-title {
+  font-size: 14px;
+  line-height: 18px;
+  color: #4f4f4f;
+  margin-bottom: 8px;
 }
 .my-skills-list {
   list-style: disc;
   padding-left: 16px;
-}
-.my-skills-item {
-  font-size: 16px;
-  line-height: 24px;
   color: #328a36;
 }
+/* .my-skills-item {
+} */
 .my-skills-text {
   color: #4f4f4f;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 20px;
 }
 /* =============================  Project-price-section  ================================= */
 .project-price-section {
@@ -156,6 +193,7 @@ a {
   padding: 40px;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
+  height: 684px;
 }
 .project-price-title {
   font-weight: bold;
