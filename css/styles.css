@@ -172,6 +172,7 @@ a {
   line-height: 18px;
   color: #4f4f4f;
   margin-bottom: 8px;
+  cursor: pointer;
 }
 .my-skills-list {
   list-style: disc;
@@ -186,6 +187,9 @@ a {
   font-style: italic;
   font-size: 16px;
   line-height: 20px;
+}
+.disabled {
+  display: none;
 }
 /* =============================  Project-price-section  ================================= */
 .project-price-section {

@@ -27,7 +27,6 @@ const prices = {
 
 function getFormValues() {
   const websiteTypeElement = document.querySelector("#project-type");
-
   const pmEl = document.querySelector("#product-management");
   const desEl = document.querySelector("#design");
   const devEl = document.querySelector("#development");
@@ -66,7 +65,6 @@ function calculateWork() {
 }
 
 const formEl = document.querySelector("#project-price-form");
-
 const modalFirst = document.querySelector("#modal-first");
 const modalSecond = document.querySelector("#modal-second");
 const formBtn = document.querySelector(".project-price-calc-btn");
@@ -75,7 +73,15 @@ const modalEmailContainer = document.querySelector("#modal-email-container");
 const modalContainerBtn = document.querySelector(".modal-container-btn");
 const userEmailInput = document.querySelector("#user-email");
 const inputContainer = document.querySelector(".email-input-container");
-console.log(modalFirst);
+const firstList = document.querySelector(".first-list");
+const firstText = document.querySelector(".first-text");
+const secondList = document.querySelector(".second-list");
+const secondText = document.querySelector(".second-text");
+const thirdList = document.querySelector(".third-list");
+const thirdText = document.querySelector(".third-text");
+const forthList = document.querySelector(".forth-list");
+const forthText = document.querySelector(".forth-text");
+
 formEl.addEventListener("change", calculateWork);
 formBtn.addEventListener("click", postForm);
 modalEmailContainer.addEventListener("submit", onModalSecond);
@@ -114,3 +120,16 @@ function closedForm(e) {
 offBtns.forEach(function (offBtn) {
   offBtn.addEventListener("click", closedForm);
 });
+
+firstList.addEventListener("click", (e) =>
+  firstText.classList.toggle("disabled")
+);
+secondList.addEventListener("click", (e) =>
+  secondText.classList.toggle("disabled")
+);
+thirdList.addEventListener("click", (e) =>
+  thirdText.classList.toggle("disabled")
+);
+forthList.addEventListener("click", (e) =>
+  forthText.classList.toggle("disabled")
+);
