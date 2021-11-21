@@ -63,8 +63,10 @@ a {
   align-items: center;
 }
 .my-foto {
+  width: 268px;
   margin-bottom: 24px;
   border-radius: 50%;
+  background-size: cover;
 }
 .experience-section-icon {
   width: 24px;
@@ -99,15 +101,27 @@ a {
   background-size: contain;
 }
 .my-project {
-  padding: 8px 16px;
+  padding: 8px 32px;
+  margin-left: 32px;
 }
-.my-project-link {
+.my-project-title {
+  text-align: center;
   align-self: center;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   text-decoration-line: underline;
+  cursor: pointer;
   color: #eb5757;
+}
+.my-project-link {
+  text-align: center;
+  align-self: center;
+  font-weight: bold;
+  /* font-weight: normal; */
+  font-size: 16px;
+  line-height: 30px;
+  color: #4f4f4f;
 }
 .my-instruments {
   width: 96px;

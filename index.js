@@ -81,6 +81,8 @@ const thirdList = document.querySelector(".third-list");
 const thirdText = document.querySelector(".third-text");
 const forthList = document.querySelector(".forth-list");
 const forthText = document.querySelector(".forth-text");
+const workContainer = document.querySelector(".my-project-title");
+const projectList = document.querySelector(".my-project");
 
 formEl.addEventListener("change", calculateWork);
 formBtn.addEventListener("click", postForm);
@@ -132,4 +134,7 @@ thirdList.addEventListener("click", (e) =>
 );
 forthList.addEventListener("click", (e) =>
   forthText.classList.toggle("disabled")
+);
+workContainer.addEventListener("click", () =>
+  projectList.classList.toggle("disabled")
 );
