@@ -3,18 +3,18 @@ body {
   background-image: linear-gradient(
     to bottom,
 
-    #7deca4,
-    #74eb99,
-    #6be98e,
-    #63e882,
-    #5be676,
-    #61e474,
-    #66e272,
-    #6be070,
-    #7ade79,
-    #87db81,
-    #92d98a,
-    #9cd693
+    rgba(125, 236, 164, 0.7),
+    rgba(116, 235, 153, 0.7),
+    rgba(107, 233, 142, 0.7),
+    rgba(99, 232, 130, 0.7),
+    rgba(91, 230, 118, 0.7),
+    rgba(97, 228, 116, 0.7),
+    rgba(102, 226, 114, 0.7),
+    rgba(107, 224, 112, 0.7),
+    rgba(122, 222, 121, 0.7),
+    rgba(135, 219, 129, 0.7),
+    rgba(146, 217, 138, 0.7),
+    rgba(156, 214, 147, 0.7)
   );
 }
 h1 {
@@ -224,17 +224,21 @@ a {
 .project-price-section {
   background: linear-gradient(
     to bottom,
-    #85f4a1,
-    #8df399,
-    #95f191,
-    #9cf08a,
-    #a4ee82
+    rgba(133, 244, 161, 0.4),
+    rgba(141, 243, 153, 0.4),
+    rgba(149, 241, 145, 0.4),
+    rgba(156, 240, 138, 0.4),
+    rgba(164, 238, 130, 0.4)
   );
 
   padding: 40px;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   height: 684px;
+}
+.project-price-section:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  box-shadow: 1px 9px 13px rgba(0, 0, 0, 0.09);
 }
 .project-price-title {
   font-weight: bold;
@@ -342,7 +346,14 @@ a {
   align-items: center;
   width: 364px;
   height: 100%;
-  background-color: #ffffff;
+  background: linear-gradient(
+    to bottom,
+    rgba(133, 244, 161, 0.7),
+    rgba(141, 243, 153, 0.7),
+    rgba(149, 241, 145, 0.7),
+    rgba(156, 240, 138, 0.7),
+    rgba(164, 238, 130, 0.7)
+  );
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   padding: 104px 32px;
@@ -354,7 +365,7 @@ a {
   top: 24px;
   right: 24px;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: inherit;
 }
 .modal-container-icon {
   margin-bottom: 40px;
@@ -388,6 +399,7 @@ a {
   border: none;
   border-bottom: 1px solid #4f4f4f;
   outline: none;
+  background: inherit;
 }
 .email-error-text {
   font-size: 16px;

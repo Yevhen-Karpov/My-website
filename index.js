@@ -25,6 +25,30 @@ const prices = {
   },
 };
 
+const formEl = document.querySelector("#project-price-form");
+const modalFirst = document.querySelector("#modal-first");
+const modalSecond = document.querySelector("#modal-second");
+const formBtn = document.querySelector(".project-price-calc-btn");
+const offBtns = document.querySelectorAll(".modal-close-icon");
+const modalEmailContainer = document.querySelector("#modal-email-container");
+const modalContainerBtn = document.querySelector(".modal-container-btn");
+const userEmailInput = document.querySelector("#user-email");
+const inputContainer = document.querySelector(".email-input-container");
+const firstList = document.querySelector(".first-list");
+const firstText = document.querySelector(".first-text");
+const secondList = document.querySelector(".second-list");
+const secondText = document.querySelector(".second-text");
+const thirdList = document.querySelector(".third-list");
+const thirdText = document.querySelector(".third-text");
+const forthList = document.querySelector(".forth-list");
+const forthText = document.querySelector(".forth-text");
+const workContainer = document.querySelector(".my-project-title");
+const projectList = document.querySelector(".my-project");
+
+formEl.addEventListener("change", calculateWork);
+formBtn.addEventListener("click", postForm);
+modalEmailContainer.addEventListener("submit", onModalSecond);
+
 function getFormValues() {
   const websiteTypeElement = document.querySelector("#project-type");
   const pmEl = document.querySelector("#product-management");
@@ -40,6 +64,7 @@ function getFormValues() {
     qa: qaEl.checked,
   };
 }
+
 function calculateWork() {
   const values = getFormValues();
   let totalPrice = 0;
@@ -64,35 +89,11 @@ function calculateWork() {
   console.log(totalPrice);
 }
 
-const formEl = document.querySelector("#project-price-form");
-const modalFirst = document.querySelector("#modal-first");
-const modalSecond = document.querySelector("#modal-second");
-const formBtn = document.querySelector(".project-price-calc-btn");
-const offBtns = document.querySelectorAll(".modal-close-icon");
-const modalEmailContainer = document.querySelector("#modal-email-container");
-const modalContainerBtn = document.querySelector(".modal-container-btn");
-const userEmailInput = document.querySelector("#user-email");
-const inputContainer = document.querySelector(".email-input-container");
-const firstList = document.querySelector(".first-list");
-const firstText = document.querySelector(".first-text");
-const secondList = document.querySelector(".second-list");
-const secondText = document.querySelector(".second-text");
-const thirdList = document.querySelector(".third-list");
-const thirdText = document.querySelector(".third-text");
-const forthList = document.querySelector(".forth-list");
-const forthText = document.querySelector(".forth-text");
-const workContainer = document.querySelector(".my-project-title");
-const projectList = document.querySelector(".my-project");
-
-formEl.addEventListener("change", calculateWork);
-formBtn.addEventListener("click", postForm);
-modalEmailContainer.addEventListener("submit", onModalSecond);
-console.log(offBtns);
-
 function postForm(e) {
   e.preventDefault();
   modalFirst.classList.add("modal-active");
 }
+
 function onModalSecond(e) {
   e.preventDefault();
   if (userEmailInput.value) {
@@ -123,18 +124,43 @@ offBtns.forEach(function (offBtn) {
   offBtn.addEventListener("click", closedForm);
 });
 
-firstList.addEventListener("click", (e) =>
-  firstText.classList.toggle("disabled")
-);
-secondList.addEventListener("click", (e) =>
-  secondText.classList.toggle("disabled")
-);
-thirdList.addEventListener("click", (e) =>
-  thirdText.classList.toggle("disabled")
-);
-forthList.addEventListener("click", (e) =>
-  forthText.classList.toggle("disabled")
-);
+// firstList.addEventListener("click", (e) =>
+//   firstText.classList.toggle("disabled")
+// );
+// secondList.addEventListener("click", (e) =>
+//   secondText.classList.toggle("disabled")
+// );
+// thirdList.addEventListener("click", (e) =>
+//   thirdText.classList.toggle("disabled")
+// );
+// forthList.addEventListener("click", (e) =>
+//   forthText.classList.toggle("disabled")
+// );
 workContainer.addEventListener("click", () =>
   projectList.classList.toggle("disabled")
 );
+firstList.onmouseover = function () {
+  firstText.classList.toggle("disabled");
+};
+secondList.onmouseover = function () {
+  secondText.classList.toggle("disabled");
+};
+thirdList.onmouseover = function () {
+  thirdText.classList.toggle("disabled");
+};
+forthList.onmouseover = function () {
+  forthText.classList.toggle("disabled");
+};
+
+firstList.onmouseout = function () {
+  firstText.classList.toggle("disabled");
+};
+secondList.onmouseout = function () {
+  secondText.classList.toggle("disabled");
+};
+thirdList.onmouseout = function () {
+  thirdText.classList.toggle("disabled");
+};
+forthList.onmouseout = function () {
+  forthText.classList.toggle("disabled");
+};
