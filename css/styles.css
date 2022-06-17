@@ -1,6 +1,21 @@
 body {
   font-family: Montserrat, sans-serif;
-  background-color: #e5e5e5;
+  background-image: linear-gradient(
+    to bottom,
+
+    #7deca4,
+    #74eb99,
+    #6be98e,
+    #63e882,
+    #5be676,
+    #61e474,
+    #66e272,
+    #6be070,
+    #7ade79,
+    #87db81,
+    #92d98a,
+    #9cd693
+  );
 }
 h1 {
   font-weight: bold;
@@ -207,7 +222,15 @@ a {
 }
 /* =============================  Project-price-section  ================================= */
 .project-price-section {
-  background-color: #ffffff;
+  background: linear-gradient(
+    to bottom,
+    #85f4a1,
+    #8df399,
+    #95f191,
+    #9cf08a,
+    #a4ee82
+  );
+
   padding: 40px;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
@@ -234,6 +257,7 @@ a {
   margin-bottom: 32px;
 }
 .project-type-select {
+  background-image: linear-gradient(to bottom, #85f4a1, #8df399);
   font-size: 16px;
   line-height: 24px;
   color: #4f4f4f;
